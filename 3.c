@@ -10,11 +10,12 @@ int main(){
     char name[MAX];
     printf("Entre com nome: ");
     scanf("%s", name);
+    push(&x, '\0');
     int j = strlen(name)-1;
     for (i = 0; i <=j; i++){
         push(&x, name[i]);
     }
-    for (i=j; i>=0; i--){
+    for (i=j+1; i>=0; i--){
         push(&y, pop(&x));
     }
     printf("\n y é = %s\n", y.vetor);
